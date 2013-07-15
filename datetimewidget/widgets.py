@@ -124,9 +124,9 @@ class DateTimeWidget(MultiWidget):
                '%s'\
                '<span class="add-on"><i class="icon-th"></i></span>'\
                '</div>'\
-               '<script type="text/javascript">'\
+               '<script type="text/javascript">$(function(){'\
                '%s$("#%s").datetimepicker({%s});'\
-               '</script>  ' % ( id, rendered_widgets[0], js_i18n.replace(', u\'',', \'').replace('[u', '['), id , js_options)
+               '});</script>  ' % ( id, rendered_widgets[0], js_i18n.replace(', u\'',', \'').replace('[u', '['), id , js_options)
 
 
     class Media:
